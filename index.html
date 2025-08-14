@@ -1,89 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta name="description" content="Friends Construction and Architect - We build dreams into reality across Tamil Nadu, Kerala, and Karnataka with 2D/3D plans, construction, interiors, and more.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Friends Construction and Architect</title>
-
-<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&family=Orbitron:wght@500&display=swap" rel="stylesheet">
-
 <style>
-/* ========== ANIMATE ON SCROLL FIX ========== */
-.animate-on-scroll {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-.animate-on-scroll.hidden {
-  opacity: 0;
-  transform: translateY(20px);
-}
+  /* Animate on scroll fix */
+  .animate-on-scroll { opacity: 1 !important; transform: translateY(0) !important; }
 
-/* ====== GENERAL STYLES ====== */
-body { font-family:'Roboto',sans-serif; margin:0; padding:0; overflow-x:hidden; color:#000; }
-h1,h2,h3,h4,h5,h6 { font-family:'Montserrat',sans-serif;font-weight:700; color:#000; margin:0 0 1rem 0; }
-p { font-size:1.1rem; line-height:1.6; margin:0 0 1rem 0; }
-header, nav, main, section, footer { display:block; }
-header { text-align:center; padding:1rem; background:#04619f; color:white; }
-.header-container { position: relative; height: 250px; }
-.header-nav { position:absolute; bottom:0; left:0; width:100%; background: rgba(0,0,0,0.6); backdrop-filter: blur(12px); display:flex; justify-content: space-evenly; padding:0.75rem 0; box-sizing:border-box; z-index:5; border-top:1px solid rgba(255,255,255,0.15); }
-.header-nav a { color:white; text-decoration:none; font-weight:600; text-align:center; flex-grow:1; }
-.header-nav a:hover { color:#ffcc00; }
-
-.services-grid, .projects-grid { display:grid; gap:2rem; }
-.services-grid { grid-template-columns: repeat(3,1fr); }
-.projects-grid { grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); }
-@media(max-width:900px){.services-grid{grid-template-columns:repeat(2,1fr);}}
-@media(max-width:600px){.services-grid{grid-template-columns:1fr;}}
-
-.service, .project { background:white; border-radius:10px; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; }
-.service:hover, .project:hover { transform:scale(1.03); box-shadow:0 6px 20px rgba(0,0,0,0.2); cursor:pointer; }
-.service img, .project img { width:100%; height:180px; object-fit:cover; filter:brightness(0.8); }
-.service div, .project div { padding:1rem; }
-
-.contact { background:#012840; color:white; text-align:center; padding:2rem; }
-.form-section { background:white; padding:2rem; border-radius:10px; max-width:600px; margin:2rem auto; box-shadow:0 2px 10px rgba(0,0,0,0.1); }
-.form-section input, .form-section select, .form-section textarea { width:100%; padding:0.75rem; margin-bottom:1rem; border:1px solid #ccc; border-radius:5px; box-sizing:border-box; }
-.form-section button { background:#04619f; color:white; padding:0.75rem 1.5rem; border:none; border-radius:5px; cursor:pointer; }
-footer { background:#000; color:#aaa; text-align:center; padding:1rem; }
-
-body.dark-theme { background-color:#111; color:#eee; }
-body.dark-theme header nav a { color:#ddd; }
-body.dark-theme .service, body.dark-theme .project, body.dark-theme .form-section { background:#1f1f1f; color:#eee; box-shadow:0 2px 12px rgba(255,255,255,0.1); }
-body.dark-theme footer { background:#000; color:#888; }
-
-/* Back to top button */
-#backToTop { position: fixed; bottom: 30px; right:30px; display:none; background:#04619f; color:white; border:none; padding:0.6rem 1rem; border-radius:50%; font-size:1.5rem; cursor:pointer; box-shadow:0 4px 8px rgba(0,0,0,0.3); z-index:9999; }
-#backToTop:hover { background:#023e66; }
-
+  body { font-family: 'Roboto', sans-serif; margin:0; padding:0; }
+  h2 { font-family:'Montserrat',sans-serif; }
+  .services-grid { display:grid; gap:2rem; grid-template-columns: repeat(3,1fr); }
+  @media(max-width:900px){.services-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:600px){.services-grid{grid-template-columns:1fr;}}
+  .service { background:white;border-radius:10px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.1); }
+  .service img { width:100%; height:180px; object-fit:cover; filter:brightness(0.8); }
+  .service div { padding:1rem; }
+  .contact { background:#012840; color:white; text-align:center; padding:2rem; }
+  .form-section { background:white; padding:2rem; border-radius:10px; max-width:600px; margin:2rem auto; box-shadow:0 2px 10px rgba(0,0,0,0.1); }
+  .form-section input, .form-section select, .form-section textarea { width:100%; padding:0.75rem; margin-bottom:1rem; border:1px solid #ccc; border-radius:5px; box-sizing:border-box; }
+  .form-section button { background:#04619f; color:white; padding:0.75rem 1.5rem; border:none; border-radius:5px; cursor:pointer; }
+  footer { background:#000; color:#aaa; text-align:center; padding:1rem; }
 </style>
 </head>
 <body>
-<div class="header-container">
-  <header>
-    <div class="company-name" style="font-size:clamp(2.5rem,6vw,3.5rem);">Friends Construction and Architect</div>
-    <div class="tagline" style="font-size:1.1rem;">We Build Dreams Into Reality</div>
-    <div class="contact-info" style="font-size:0.95rem;">📍 All over Tamil Nadu | 📞 78250 57008 | 📧 fcaconstruction2@gmail.com</div>
-  </header>
-  <nav class="header-nav">
-    <a href="#home">Home</a>
-    <a href="#about">About Us</a>
-    <a href="#services">Our Services</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</div>
 
-<button id="themeToggle">Theme</button>
+<header style="text-align:center; padding:2rem; background:#04619f; color:white;">
+  <h1>Friends Construction and Architect</h1>
+  <p>We Build Dreams Into Reality</p>
+  <p>📍 All over Tamil Nadu | 📞 78250 57008 | 📧 fcaconstruction2@gmail.com</p>
+</header>
 
 <main>
-  <section id="about" class="animate-on-scroll">
-    <h2>About Us</h2>
-    <p>We are a leading construction and architectural firm delivering high-quality infrastructure solutions across Tamil Nadu, Kerala, and Karnataka.</p>
-  </section>
-
   <section id="services" class="animate-on-scroll">
     <h2>Our Services</h2>
     <div class="services-grid">
@@ -93,7 +42,7 @@ body.dark-theme footer { background:#000; color:#888; }
     </div>
   </section>
 
-  <section class="contact animate-on-scroll" id="contact">
+  <section class="contact animate-on-scroll">
     <h2>Talk with Our Expert</h2>
     <p>Fill out the form and our team will contact you shortly.</p>
   </section>
@@ -123,46 +72,49 @@ body.dark-theme footer { background:#000; color:#888; }
   &copy; 2025 Friends Construction and Architect | Contact: 78250 57008 | Email: fcaconstruction2@gmail.com
 </footer>
 
-<button id="backToTop" title="Go to top">⬆️</button>
-
 <script>
-// Theme toggle
-document.addEventListener("DOMContentLoaded", () => {
-  const toggleButton = document.getElementById("themeToggle");
-  toggleButton.addEventListener("click", () => {
-    document.body.classList.toggle("dark-theme");
-    toggleButton.textContent = document.body.classList.contains("dark-theme") ? "Light" : "Theme";
-  });
-});
-
-// Back to top button
-const backToTopButton = document.getElementById("backToTop");
-window.addEventListener("scroll", () => {
-  backToTopButton.style.display = (window.scrollY > 300) ? "block" : "none";
-});
-backToTopButton.addEventListener("click", () => { window.scrollTo({top:0,behavior:"smooth"}); });
-
 // Animate on scroll
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add('visible'); } });
-}, { threshold:0.1 });
-document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('.animate-on-scroll').forEach(el => el.classList.add('visible'));
+});
 
-// Contact form submit
+// Contact Form JS
 document.getElementById("contactForm").addEventListener("submit", async (e) => {
   e.preventDefault();
   const form = e.target;
-  const data = { name:form.name.value,email:form.email.value,phone:form.phone.value,service:form.service.value,message:form.message.value };
+  const data = {
+    name: form.name.value,
+    email: form.email.value,
+    phone: form.phone.value,
+    service: form.service.value,
+    message: form.message.value
+  };
+
+  console.log("Sending data:", data); // debug log
+
   try {
     const res = await fetch("https://fca-mail-backend.onrender.com/send", {
-      method:"POST",
-      headers:{"Content-Type":"application/json"},
-      body:JSON.stringify(data)
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
     });
-    if(res.ok){ alert("Message sent successfully!"); form.reset(); }
-    else { alert("Failed to send message. Try again."); }
-  } catch(err){ alert("Error sending message. Check your network."); console.error(err); }
+
+    console.log("Response:", res.status, res.statusText); // debug log
+
+    if(res.ok){
+      alert("Message sent successfully!");
+      form.reset();
+    } else {
+      const text = await res.text();
+      alert("Failed to send message. See console.");
+      console.error("Error response:", text);
+    }
+  } catch(err){
+    alert("Error sending message. Check your network and backend console.");
+    console.error(err);
+  }
 });
 </script>
+
 </body>
 </html>
